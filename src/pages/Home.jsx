@@ -1,7 +1,25 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './home.css'
+import { useSelector, useDispatch } from 'react-redux'
+import { rename } from '../store/slices/name.slice'
 
 function Home() {
+
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const user = useSelector( state => state.name )
+  let name
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    dispatch( rename() )
+    
+  }
+
+  if (user) {
+    navigate('/pokedex')
+  }
   return (
     <div className='container__home-page'>
       <div className='container__img-pokemon'>
@@ -10,10 +28,17 @@ function Home() {
       </div>
       <div className='container__input-pokemon'>
           <p>Give me your name to start</p>
-          <div>
-              <input type="text" />
-              <i class='bx bx-paper-plane'></i>
-          </div>
+          <form onSubmit={ handleSubmit }>
+            <div>
+              <input type="text"
+              value={name}
+              onChange={ e => name =e.target.value}
+              />
+              <button type='submit'>
+                <i class='bx bx-paper-plane'></i>
+              </button>
+            </div>
+          </form>
       </div>
     </div>
   )
