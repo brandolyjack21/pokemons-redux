@@ -3,23 +3,30 @@ import { useNavigate } from 'react-router-dom'
 import './home.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { rename } from '../store/slices/name.slice'
+import { userName } from '../store/slices/userName.slice'
+import { useState } from 'react'
 
 function Home() {
+
+  const username = useSelector( state => state.userName)
+  console.log(username, 'este es el username')
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const user = useSelector( state => state.name )
-  let name
+  const [name, setName] = useState('')
 
   const handleSubmit = e => {
     e.preventDefault()
-    dispatch( rename() )
-    
+    dispatch( rename(name) )
+
+    if (user) {
+      navigate('/pokedex')
+    }
   }
 
-  if (user) {
-    navigate('/pokedex')
-  }
+  
+
   return (
     <div className='container__home-page'>
       <div className='container__img-pokemon'>
@@ -32,7 +39,7 @@ function Home() {
             <div>
               <input type="text"
               value={name}
-              onChange={ e => name =e.target.value}
+              onChange={ e => setName(e.target.value)}
               />
               <button type='submit'>
                 <i class='bx bx-paper-plane'></i>
