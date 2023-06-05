@@ -29,7 +29,7 @@ function PokemonCard({ pokeapi }) {
 
   return (
     
-        <div className='container__card-pokemon' onClick={() => updateStatus( )}>
+        <div className={ `container__card-pokemon ${pokemon?.types?.[0].type.name}` } onClick={() => updateStatus( )}>
           <h2>{pokemon.name}</h2>
           <div className='container__statistics'>
             <p>types: {pokemon?.types?.[0].type.name},{pokemon?.types?.[1]?.type.name}</p> 

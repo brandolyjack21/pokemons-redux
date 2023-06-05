@@ -1,0 +1,127 @@
+ @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100wh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.container__pokemon--description img{
+    width: 250px;
+    height: 250px;
+    padding-left: 10px;
+}
+
+.container__pokemon--title h4{
+    font-size: 60px;
+    text-align: center;
+}
+
+.container__w-h{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 300px;
+    height: 70px;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    color: rgb(75, 74, 74);
+}
+
+.container__w-h span{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(240, 248, 255, 0.712);
+}
+
+.container__pokemon--description h1{
+    text-align: center;
+    color: rgb(41, 41, 41);
+    padding: 5px;
+    background-color: rgba(240, 248, 255, 0.795);
+    border-radius: 10px;
+}
+
+.container__type h2{
+    text-align: center;
+    color: rgb(41, 41, 41);
+    padding: 5px;
+    background-color: rgba(240, 251, 255, 0.76);
+    border-radius: 10px;
+}
+
+.container__types-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 300px;
+    height: 70px;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    color: rgb(43, 43, 43);
+}
+
+.container__types-name div{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(240, 248, 255, 0.801);
+
+}
+
+.container__pokemon--description{
+    width: 320px;
+    height: max-content;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 15px;
+}
+
+.container__abilities{
+    display: flex;
+    flex-direction: column;
+}
+
+.container__abilities h3{
+    text-align: center;
+    color: rgb(41, 41, 41);
+    padding: 5px;
+    background-color: rgba(240, 251, 255, 0.76);
+    border-radius: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.container__abilities--name{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.container__abilities--name div{
+    background-color: rgba(255, 255, 255, 0.76);
+    padding: 5px;
+    border-radius: 5px;
+    color: rgb(48, 48, 48);
+}

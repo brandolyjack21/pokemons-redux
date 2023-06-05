@@ -3,7 +3,7 @@ import './App.css'
 import {HashRouter, Routes, Route} from 'react-router-dom'
 import Home from './pages/Home'
 import Pokedex from './pages/Pokedex'
-import PokemonStatistics1 from './pages/PokemonStatistics1.jsx'
+import PokemonStatistics1 from './pages/PokemonStatistics1'
 
 function App() {
   const [count, setCount] = useState(0)
