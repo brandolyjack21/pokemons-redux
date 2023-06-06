@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const nameSlice = createSlice({
     name: 'name',
-    initialState: 'brandoly',
+    initialState: '',
     reducers:{
        rename: (state, action) => {
         console.log(action.payload, 'action.payload')
