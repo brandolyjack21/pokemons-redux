@@ -18,10 +18,10 @@ function Pokedex() {
 
   const name = useSelector(state => state.name)
   return (
-    <>
-    <h1>Pokedex</h1>
-    <p>{ `welcome ${name}, here you can find your favorite pokemon` }</p>
-    <div>
+    <div className='container__greeting'>
+    <h1 className='h1'>Pokedex</h1>
+    <span className='greeting'>Welcome <span className='user'>{name}</span>, here you can find your favorite pokemon</span>
+    <div className='container__cards'>
       <div></div>
       <ul className='container__card-pokeapi'>
         {
@@ -30,7 +30,7 @@ function Pokedex() {
       </ul>
     </div>
 
-    </>
+    </div>
   )
 }
 

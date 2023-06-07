@@ -9,7 +9,7 @@
 
 .container{
     width: 100vw;
-    height: 100wh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -124,4 +124,31 @@
     padding: 5px;
     border-radius: 5px;
     color: rgb(48, 48, 48);
+}
+
+@media only screen and (min-width: 768px){
+    .container__pokemon--description{
+    width: max-content;
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .container__pokemon--description img{
+    width: 450px;
+    height: 450px;
+    padding-left: 10px;
+    }
+
+    .container-description-poke{
+        width: 400px;
+    }
+
+    .container{
+        height: 100vh;
+        max-width: 2024px;
+        margin: 0 auto;
+    }
 }

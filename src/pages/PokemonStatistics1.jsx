@@ -29,7 +29,8 @@ function PokemonStatistics1() {
       </div>
       <div className='container__pokemon--description'>
         <img src={ pokeApi.sprites?.other.dream_world.front_default } alt="" />
-        <h1>{ pokeApi.name }</h1>
+        <div className='container-description-poke'>
+          <h1>{ pokeApi.name }</h1>
         <div className='container__w-h'>
           <div className='container__weight'>
            <span>weight: { pokeApi.weight }</span>
@@ -51,6 +52,7 @@ function PokemonStatistics1() {
             <div>{ pokeApi.abilities?.[0].ability.name }</div>
             <div>{ pokeApi.abilities?.[1].ability.name }</div>
           </div>
+        </div>
         </div>
       </div>
     </div>
